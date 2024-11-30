@@ -1,0 +1,18 @@
+# .air.toml
+# Air 설정 파일
+
+# 기본적으로 Go 프로젝트의 빌드를 설정
+root = "."
+tmp_dir = "tmp"
+include_dir = ["."]
+exclude_dir = ["assets", "tmp", "vendor"]
+
+[build]
+  bin = "tmp/main"  # 빌드 결과물이 저장될 파일 경로
+  cmd = "go run ."  # Go 애플리케이션 실행 명령어
+  ignore = []  # 무시할 파일들 (예: 테스트 파일 등)
+  delay = 1000 # 밀리초로 빌드 지연 시간 설정
+
+[log]
+  time = true  # 타임스탬프 포함 여부
+  prefix = "[air]"  # 로그 접두사
